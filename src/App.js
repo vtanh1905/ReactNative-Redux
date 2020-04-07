@@ -1,22 +1,21 @@
-import { registerRootComponent } from 'expo';
 import React from 'react';
-import { StyleSheet, Text, View } from 'react-native';
+import { registerRootComponent } from 'expo';
+import { Provider } from 'react-redux';
+import { createStore } from 'redux';
+import reducers from './reducers';
+
+import Home from './components/Home'
+
+const store = createStore(
+  reducers
+);
 
 export default function App() {
   return (
-    <View style={styles.container}>
-      <Text>Test Redux with React native</Text>
-    </View>
+    <Provider store={store}>
+      <Home />
+    </Provider>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#fff',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-});
 
 registerRootComponent(App);

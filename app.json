@@ -1,13 +1,12 @@
 {
   "expo": {
-    "name": "03.redux-with-react-native",
-    "slug": "03.redux-with-react-native",
+    "name": "Redux_React_Native",
+    "slug": "Redux_React_Native",
     "platforms": [
       "ios",
       "android",
       "web"
     ],
-    "entryPoint": "./src/App.js",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/icon.png",
@@ -16,6 +15,7 @@
       "resizeMode": "contain",
       "backgroundColor": "#ffffff"
     },
+    "entryPoint": "./src/App.js",
     "updates": {
       "fallbackToCacheTimeout": 0
     },
